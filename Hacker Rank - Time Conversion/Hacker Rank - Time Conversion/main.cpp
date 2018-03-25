@@ -1,0 +1,22 @@
+//
+//  main.cpp
+//  Hacker Rank - Time Conversion
+//
+//  Created by S M HEMEL on 12/24/16.
+//  Copyright © 2016 S M HEMEL. All rights reserved.
+//
+
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    int hh, mm, ss ;
+    char t12[3];
+    scanf("%d:%d:%d%s", &hh, &mm, &ss, t12) ;
+    
+    if (strcmp(t12,"PM")==0 && hh!=12) hh += 12 ;
+    if (strcmp(t12,"AM")==0 && hh==12) hh = 0 ;
+    
+    printf("%02d:%02d:%02d\n", hh, mm, ss) ;
+    return 0;
+}
